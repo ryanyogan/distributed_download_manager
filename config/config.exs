@@ -10,6 +10,9 @@ config :download_manager, DownloadManagerWeb.Endpoint,
 config :download_manager, DownloadManager.Download.Repo,
   adapter: DownloadManager.Download.Repo.Nebulex
 
+config :download_manager, DownloadManager.Download.Tracker.Worker,
+  adapter: DownloadManager.Download.Tracker.Worker.Fake
+
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id]
