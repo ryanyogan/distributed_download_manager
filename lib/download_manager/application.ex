@@ -25,10 +25,6 @@ defmodule DownloadManager.Application do
   end
 
   defp topologies do
-    [
-      background_job: [
-        strategy: Cluster.Strategy.Gossip
-      ]
-    ]
+    Application.get_env(:libcluster, :topologies) || []
   end
 end
