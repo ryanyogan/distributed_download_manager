@@ -43,6 +43,8 @@ defmodule DownloadManagerWeb do
 
   def live_view do
     quote do
+      import DownloadManagerWeb.LayoutView
+
       use Phoenix.LiveView,
         layout: {DownloadManagerWeb.LayoutView, "live.html"}
 
